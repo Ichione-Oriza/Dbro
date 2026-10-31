@@ -1,30 +1,34 @@
 # Dbro
 
-A fast, lightweight desktop database manager for Windows, with a Navicat-style interface.
+A fast, lightweight desktop database manager for Windows.
 
 **Supported databases:** MySQL · MariaDB · PostgreSQL · SQL Server · SQLite
 
 ## Download
 
-👉 **[Download the latest version](https://github.com/Ichione-Oriza/Dbro/releases/latest)**: get `Dbro-Setup-x.y.z.exe` from the **Assets** section.
+👉 **[Download Dbro-Setup.exe](https://github.com/Ichione-Oriza/Dbro/releases/latest/download/Dbro-Setup.exe)** (latest version)
+
+All versions and release notes: [Releases](https://github.com/Ichione-Oriza/Dbro/releases).
+
+**Requirements:** Windows 10 or 11, 64-bit.
 
 ### Installation
 
-1. Run `Dbro-Setup-x.y.z.exe`. Dbro installs for the current user and does not need administrator rights.
+1. Run `Dbro-Setup.exe` and choose where to install (default: `%LOCALAPPDATA%\Programs\Dbro`). Dbro installs for the current user and does not need administrator rights.
 2. Windows SmartScreen may show *"Windows protected your PC"* because the installer is not code-signed yet. Click **More info → Run anyway**.
 
 ### Updates
 
-Dbro checks for new versions on startup and downloads them in the background. When an update is ready, choose **Restart Now** to install it right away, or **Later** to install it the next time you close the app. You can also check manually via **Help → Check for Updates…**.
+Dbro checks for a new version when it starts, or via **Help → Check for Updates…**. If one is available, it shows what's new and asks **Download & Install** or **Later**. After the download, Dbro closes, installs the update and opens again.
 
 Your connections, saved passwords, scripts and backups are kept when you update.
 
 ## Features
 
-- **Connections**: MySQL, MariaDB, PostgreSQL, SQL Server and SQLite, with SSL and **SSH tunnel** support (password or private key). Saved passwords are encrypted with Windows DPAPI.
+- **Connections**: MySQL, MariaDB, PostgreSQL, SQL Server and SQLite, with SSL and **SSH tunnel** support (password or private key). Saved passwords are encrypted with Windows DPAPI; SSH host keys are verified.
 - **Connect by URI**: e.g. `mysql://user:pass@host:3306/db`.
 - **SQL editor**: syntax highlighting, autocomplete, run multiple statements or just the selection, Explain, export results to CSV/JSON.
-- **Table data**: inline editing, add/delete rows, Navicat-style filter & sort, grid/form view, cell editor, pagination.
+- **Table data**: inline editing, add/delete rows, filter & sort builder, grid/form view, cell editor, pagination.
 - **Table designer** (MySQL/MariaDB, PostgreSQL): fields, indexes, foreign keys, checks, triggers, with SQL preview.
 - **User management**: create and edit users, roles and logins; manage privileges.
 - **Dump & restore**: pure JavaScript, works over SSH tunnels, no `mysqldump`/`pg_dump` needed.
@@ -47,10 +51,16 @@ Your connections, saved passwords, scripts and backups are kept when you update.
 
 | What | Location |
 | --- | --- |
-| Connections & settings | `%APPDATA%\Dbro` |
+| Connections, settings, known SSH hosts | `%APPDATA%\Dbro` |
 | Scripts | `C:\Users\<you>\Dbro\Scripts` |
 | Backups | `C:\Users\<you>\Dbro\Backups` |
 
 ## Reporting issues
 
 Found a bug or have a suggestion? Please open an [issue](https://github.com/Ichione-Oriza/Dbro/issues).
+
+## License
+
+Dbro is released under the [MIT License](LICENSE). Licenses of bundled third-party software are in `THIRD_PARTY_NOTICES.txt` in the install folder.
+
+MySQL, MariaDB, PostgreSQL, SQL Server and SQLite are trademarks of their respective owners. Dbro is an independent project and is not affiliated with them.
