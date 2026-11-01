@@ -76,6 +76,9 @@
     .hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.15; margin: 20px 0 12px; letter-spacing: -.02em; }
     .hero h1 .grad { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .hero p.lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+    /* Room for the sticky header when a nav link scrolls to a section. */
+    [id] { scroll-margin-top: 84px; }
+    #get { scroll-margin-top: 180px; }
     .cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 10px; font-weight: 600; font-size: 16px; border: 1px solid transparent; }
     .btn:hover { text-decoration: none; }
@@ -141,6 +144,7 @@
     <div class="wrap">
       <a class="brand" href="#top"><img src="logo.svg" alt="" />Dbro</a>
       <nav>
+        <a href="#get" data-i18n="nav.download">Download</a>
         <a href="#features" data-i18n="nav.features">Features</a>
         <a href="#install" data-i18n="nav.install">Install</a>
         <a href="#security" data-i18n="nav.security">Security</a>
@@ -159,7 +163,7 @@
         <img class="logo" src="logo.svg" alt="Dbro logo" />
         <h1><span class="grad">Dbro</span><br /><span data-i18n="hero.title">Database manager for Windows</span></h1>
         <p class="lead" data-i18n="hero.lead">Fast and lightweight. Connect, query, edit, design, dump and restore your databases — directly or through an SSH tunnel.</p>
-        <div class="cta">
+        <div class="cta" id="get">
           <a class="btn btn-primary" id="download" href="https://github.com/Ichione-Oriza/Dbro/releases/latest/download/Dbro-Setup.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
             <span data-i18n="hero.download">Download for Windows</span>
@@ -298,7 +302,7 @@
     const ASSET = 'Dbro-Setup.exe';
 
     const VI = {
-      'nav.features': 'Tính năng', 'nav.install': 'Cài đặt', 'nav.security': 'Bảo mật', 'nav.releases': 'Các phiên bản',
+      'nav.download': 'Tải về', 'nav.features': 'Tính năng', 'nav.install': 'Cài đặt', 'nav.security': 'Bảo mật', 'nav.releases': 'Các phiên bản',
       'hero.title': 'Quản lý database cho Windows',
       'hero.lead': 'Nhanh và nhẹ. Kết nối, truy vấn, sửa dữ liệu, thiết kế bảng, dump và restore database — trực tiếp hoặc qua SSH tunnel.',
       'hero.download': 'Tải về cho Windows', 'hero.notes': 'Ghi chú phát hành', 'hero.req': 'Windows 10 / 11 · 64-bit · Miễn phí',
