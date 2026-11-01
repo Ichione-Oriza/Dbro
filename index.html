@@ -124,12 +124,6 @@
     .callout { margin-top: 20px; padding: 16px 18px; border-radius: 12px; background: var(--brand-soft); font-size: 15px; }
     .callout b { color: var(--text); }
 
-    /* data table */
-    table { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-    th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); }
-    th { color: var(--muted); font-weight: 600; background: var(--bg-soft); }
-    tr:last-child td { border-bottom: 0; }
-
     footer { padding: 32px 0 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 
@@ -290,20 +284,6 @@
       </div>
     </section>
 
-    <section id="data">
-      <div class="wrap">
-        <h2 data-i18n="data.title">Where your data is stored</h2>
-        <p class="sub" data-i18n="data.sub">Updating or reinstalling Dbro keeps all of it.</p>
-        <table>
-          <thead><tr><th data-i18n="data.what">What</th><th data-i18n="data.where">Location</th></tr></thead>
-          <tbody>
-            <tr><td data-i18n="data.r1">Connections, settings, known SSH hosts</td><td><code>%APPDATA%\Dbro</code></td></tr>
-            <tr><td data-i18n="data.r2">Scripts</td><td><code>C:\Users\&lt;you&gt;\Dbro\Scripts</code></td></tr>
-            <tr><td data-i18n="data.r3">Backups</td><td><code>C:\Users\&lt;you&gt;\Dbro\Backups</code></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -346,8 +326,6 @@
       'c3.t': 'Không mở cổng, không theo dõi', 'c3.d': 'Dbro không lắng nghe trên mạng và không thu thập dữ liệu sử dụng hay thống kê nào.',
       'c4.t': 'Chống sửa đổi ứng dụng', 'c4.d': 'Ứng dụng tự kiểm tra file của mình khi khởi động và không chạy nếu bị sửa đổi.',
       'sec.tips': '<b>Thói quen tốt:</b> chỉ tải Dbro từ trang này · luôn bật “Verify server certificate” · nếu Dbro cảnh báo SSH host key <b>đã thay đổi</b>, hãy dừng lại và hỏi IT · giữ kín file dump vì chúng chứa dữ liệu của bạn.',
-      'data.title': 'Dữ liệu được lưu ở đâu', 'data.sub': 'Cập nhật hoặc cài lại Dbro đều giữ nguyên các dữ liệu này.',
-      'data.what': 'Dữ liệu', 'data.where': 'Vị trí', 'data.r1': 'Kết nối, cài đặt, SSH host đã tin cậy', 'data.r2': 'Script', 'data.r3': 'Bản sao lưu',
       'foot.license': 'Giấy phép MIT', 'foot.issues': 'Báo lỗi',
       'foot.tm': 'MySQL, MariaDB, PostgreSQL, SQL Server và SQLite là nhãn hiệu của các chủ sở hữu tương ứng.',
       'meta.version': 'Phiên bản', 'meta.released': 'phát hành',
