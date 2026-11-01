@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="dbro-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="dbro-cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset=".5" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#dbro-bg)"/>
+  <path fill="#fff" fill-rule="evenodd" d="M110 96h140a160 160 0 0 1 0 320H110z M178 164h70a92 92 0 0 1 0 184h-70z"/>
+  <path d="M336 326v84a52 16 0 0 0 104 0v-84z" fill="none" stroke="#5B32D6" stroke-width="16" stroke-linejoin="round"/>
+  <ellipse cx="388" cy="326" rx="52" ry="16" fill="none" stroke="#5B32D6" stroke-width="16"/>
+  <path d="M336 326v84a52 16 0 0 0 104 0v-84z" fill="url(#dbro-cyl)"/>
+  <ellipse cx="388" cy="326" rx="52" ry="16" fill="#A7F3D0"/>
+  <path d="M336 354a52 16 0 0 0 104 0M336 382a52 16 0 0 0 104 0" fill="none" stroke="#ECFDF5" stroke-width="6" opacity=".8"/>
+</svg>
